@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinguaLift - Language Learning App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="top-nav">
+      <div class="nav-brand">LinguaLift</div>
+      <div class="nav-links">
+        <a href="#dailyLesson">Lesson</a>
+        <a href="#flashcard">Flashcards</a>
+        <a href="#quizBox">Quiz</a>
+        <a href="#customLanguageCode">Custom</a>
+      </div>
+    </nav>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Learn languages daily</p>
+        <h1>LinguaLift</h1>
+        <p class="subtitle">Daily lessons, flashcards, quizzes and progress tracking in one clean learning app.</p>
+      </div>
+      <div class="progress-summary">
+        <p>Streak: <strong id="streakCount">0</strong> days</p>
+        <p>Lessons Completed: <strong id="completedCount">0</strong></p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-categories">
+        <div class="category-control">
+          <label for="languageSelect">Select language</label>
+          <select id="languageSelect"></select>
+        </div>
+        <div class="category-control">
+          <label for="categorySelect">Choose category</label>
+          <select id="categorySelect">
+            <option value="vocabulary">Vocabulary</option>
+            <option value="phrases">Phrases</option>
+            <option value="grammar">Grammar</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="section custom-panel">
+        <div class="panel-header">
+          <h2>Custom Language Content</h2>
+        </div>
+        <div class="custom-grid">
+          <div class="category-control">
+            <label for="customLanguageCode">Language code</label>
+            <input id="customLanguageCode" placeholder="e.g. sw" />
+          </div>
+          <div class="category-control">
+            <label for="customLanguageName">Language name</label>
+            <input id="customLanguageName" placeholder="e.g. Swahili" />
+          </div>
+          <div class="category-control">
+            <label for="customCategory">Category</label>
+            <select id="customCategory">
+              <option value="vocabulary">Vocabulary</option>
+              <option value="phrases">Phrases</option>
+              <option value="grammar">Grammar</option>
+            </select>
+          </div>
+          <div class="category-control">
+            <label for="customTerm">Term</label>
+            <input id="customTerm" placeholder="Enter a word or phrase" />
+          </div>
+          <div class="category-control">
+            <label for="customTranslation">Translation</label>
+            <input id="customTranslation" placeholder="Enter translation" />
+          </div>
+          <div class="category-control">
+            <label for="customDetail">Detail</label>
+            <input id="customDetail" placeholder="Example sentence or notes" />
+          </div>
+          <div class="custom-action">
+            <button id="addCustomEntry" class="btn btn-primary">Save custom lesson</button>
+          </div>
+        </div>
+        <p class="detail-text">Add your own words, phrases, or grammar notes for languages not yet preloaded.</p>
+      </section>
+
+      <section class="section lesson-panel">
+        <div class="panel-header">
+          <h2>Daily Lesson</h2>
+          <button id="markLessonBtn" class="btn btn-secondary">Mark Completed</button>
+        </div>
+        <div id="dailyLesson" class="lesson-card"></div>
+      </section>
+
+      <section class="section flashcard-panel">
+        <div class="panel-header">
+          <h2>Flashcards</h2>
+          <button id="nextFlashcardBtn" class="btn btn-primary">Next Flashcard</button>
+        </div>
+        <div id="flashcard" class="flashcard">
+          <div class="flashcard-front">
+            <p id="flashcardTerm"></p>
+            <button id="speakBtn" class="btn btn-small">Pronounce</button>
+          </div>
+          <div class="flashcard-back hidden" id="flashcardBack">
+            <p id="flashcardTranslation"></p>
+            <p id="flashcardDetail" class="detail-text"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quiz-panel">
+        <div class="panel-header">
+          <h2>Quiz Practice</h2>
+          <button id="newQuizBtn" class="btn btn-secondary">New Quiz</button>
+        </div>
+        <div id="quizBox" class="quiz-box"></div>
+      </section>
+
+      <section class="section data-panel">
+        <h2>Learning Categories</h2>
+        <div class="cards-grid">
+          <article class="info-card">
+            <h3>Vocabulary</h3>
+            <p>Build your word bank with themed sets for everyday life and travel.</p>
+          </article>
+          <article class="info-card">
+            <h3>Phrases</h3>
+            <p>Practice common phrases and expressions for real conversations.</p>
+          </article>
+          <article class="info-card">
+            <h3>Grammar</h3>
+            <p>Get bite-sized grammar tips, usage examples, and sentence structure practice.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section sync-panel">
+        <h2>Progress Storage</h2>
+        <p>Learning progress is saved locally in your browser. You can also configure Firebase to sync across devices.</p>
+        <button id="clearProgressBtn" class="btn btn-danger">Clear Progress</button>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
