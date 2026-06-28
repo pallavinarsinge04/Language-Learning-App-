@@ -31,3 +31,4 @@ If you want to sync progress across devices, you can add Firebase Authentication
 - `index.html` — app layout and structure.
 - `styles.css` — UI styling.
 - `app.js` — lesson data, flashcards, quizzes, and progress persistence.
+# Language-Learning-App-
