@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.LinguaLift" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#0A2947</item>
+        <item name="colorPrimaryContainer">#D3D4C0</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">#0A2947</item>
+    </style>
+</resources>
