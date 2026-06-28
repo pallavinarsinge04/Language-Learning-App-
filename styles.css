@@ -1,15 +1,16 @@
 :root {
   color-scheme: light;
-  --bg: #f5f7fb;
+  --bg: #f3e4c9;
   --surface: #ffffff;
-  --surface-strong: #eef1f6;
-  --text: #1f2937;
-  --muted: #65748b;
-  --primary: #0f4c81;
-  --primary-soft: #7ba0c6;
-  --success: #136f46;
-  --danger: #9b1d20;
-  --border: #d6dde7;
+  --surface-strong: #d3d4c0;
+  --text: #0a2947;
+  --muted: #5f665e;
+  --primary: #0a2947;
+  --primary-soft: #f3e4c9;
+  --accent: #8b5e3c;
+  --success: #8b5e3c;
+  --danger: #8b5e3c;
+  --border: #c9c0b4;
   --radius: 20px;
   font-family: Inter, system-ui, sans-serif;
 }
@@ -21,8 +22,8 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.04), transparent 35%),
-              radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.06), transparent 28%),
+  background: radial-gradient(circle at top left, rgba(10, 41, 71, 0.08), transparent 30%),
+              radial-gradient(circle at bottom right, rgba(139, 94, 60, 0.08), transparent 25%),
               var(--bg);
   color: var(--text);
 }
@@ -80,7 +81,7 @@ button {
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-  background: rgba(15, 76, 129, 0.1);
+  background: rgba(10, 41, 71, 0.08);
   color: var(--text);
 }
 
@@ -95,7 +96,7 @@ button {
 
 .eyebrow {
   margin: 0 0 8px;
-  color: var(--primary-soft);
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.82rem;
@@ -207,7 +208,7 @@ main {
 }
 
 .btn-danger {
-  background: var(--danger);
+  background: var(--accent);
   color: white;
 }
 
@@ -215,7 +216,7 @@ main {
   margin-top: 12px;
   padding: 8px 14px;
   font-size: 0.9rem;
-  background: rgba(15, 76, 129, 0.08);
+  background: rgba(139, 94, 60, 0.12);
   color: var(--text);
 }
 
@@ -279,30 +280,30 @@ main {
   text-align: left;
   padding: 14px 16px;
   border-radius: 14px;
-  background: rgba(15, 23, 42, 0.04);
+  background: rgba(10, 41, 71, 0.04);
   color: var(--text);
   cursor: pointer;
   border: 1px solid transparent;
 }
 
 .choice-option:hover {
-  background: rgba(15, 23, 42, 0.08);
+  background: rgba(10, 41, 71, 0.08);
 }
 
 .choice-option.correct {
   border-color: var(--success);
-  background: rgba(19, 111, 70, 0.12);
+  background: rgba(139, 94, 60, 0.12);
 }
 
 .choice-option.incorrect {
   border-color: var(--danger);
-  background: rgba(155, 29, 32, 0.12);
+  background: rgba(139, 94, 60, 0.16);
 }
 
 .info-card {
   padding: 20px;
   border-radius: 22px;
-  background: var(--surface-strong);
+  background: #f3e4c9;
 }
 
 .info-card h3 {
